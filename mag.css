@@ -1,0 +1,89 @@
+body{
+	background: darkgreen;
+	width:98%;
+	height:100%;
+}
+
+#title{
+	text-align:center;
+	color: aliceblue;
+}
+
+.t{
+	color:aliceblue;
+}
+
+.cont{
+	color:  black;
+	margin-left:30%;
+}
+
+article{
+	border:2px groove rebeccapurple;
+	border-style: outset;
+	border-width: 4px;
+	width:20%;
+	margin-left:50px;
+	padding-right: 10px;
+	padding-left: 10px;	
+	float:left;
+	text-align: justify;
+}
+#ar1{
+    
+     background:url("https://www.keralatourism.org/images/destination/large/devikulam_hills_in_munnar20131031103731_132_1.jpg");
+}
+
+#ar2{
+     background:url("https://s-media-cache-ak0.pinimg.com/736x/91/c5/5f/91c55fae6d6463b79bc6e137e0d097f6--summer-beach-beach-bum.jpg");
+    
+}
+
+#ar3{
+     background:url("http://www.aprilsmith.org/uploads/6/8/3/4/6834889/2658155_orig.jpg");
+    
+}
+#ar4{
+     background:url("http://assets.nydailynews.com/polopoly_fs/1.2576360.1458835382!/img/httpImage/image.jpg_gen/derivatives/article_750/was4267001.jpg");
+    
+}
+#ar5{
+     background:url("http://postcard.news/wp-content/uploads/2017/03/bollywood.jpg");
+    
+}
+#ar6{
+     background:url("https://image.freepik.com/free-vector/fashion-lettering_1019-21.jpg");
+    
+}
+#ar7{
+     background:url("http://www.ndtv.com/cooks/images/colourful-pasta-salad.jpg");
+    
+}
+#ar8{
+     background:url("http://i.ndtvimg.com/i/2016-04/thai-curry-625_625x350_71460529837.jpg");
+    
+}
+#ar9{
+     background:url("http://bigapplecurry.files.wordpress.com/2012/11/istock_000019639558_medium.jpg");
+    
+}
+
+
+section{
+	border-top:2px ridge black;
+	padding-bottom: 200px;
+    
+}
+
+#aside-section{
+	border-top:2px ridge lightgreen;
+	padding-bottom: 50px;
+}
+
+aside{
+	float:right;
+	width:16%;
+	background:aliceblue;
+	text-align:center;
+	height:900px;
+}
