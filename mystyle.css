@@ -1,0 +1,49 @@
+#topBar{
+width: 100%;
+height: 40%;
+background-color: white;
+}
+
+#inputArea{
+width: 50%;
+height: 60%;
+background-color: orange;
+float: left;
+}
+
+#renderingArea{
+width: 50%;
+height: 60%;
+background-color: purple;
+float: left;
+text-align: center;
+}
+
+#renderingArea1{
+width: 100%;
+height: 30%;
+background-color: purple;
+margin-top: 120px;
+padding-top: 10px;
+font-size: 40px;
+font-family: serif;
+}
+
+#my_form>input{
+height: 20px;
+
+}
+
+.centeredInput{
+
+	text-align: center;
+	font-size: 30px;
+	margin-top: 10%;
+}
+
+.myShapes{
+	width: 10%;
+	height: 60%;
+	padding: 50px 11px;
+	margin-left: -20px;
+}
