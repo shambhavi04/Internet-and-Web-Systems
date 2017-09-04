@@ -1,0 +1,202 @@
+<DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" href="css/mystyle.css">
+
+	<title>
+	Area Calculator
+	</title>
+
+<script type="text/javascript">
+	
+	function renderShapes() {
+		
+	
+	var c = document.getElementById("myCanvasRect");
+	var ctx = c.getContext("2d");
+	ctx.fillRect(70, 50, 300, 400);
+	var cir = document.getElementById("myCanvasCircle");
+	var ct = cir.getContext("2d");
+	ct.beginPath();
+	ct.arc(125,75,60,0,2*Math.PI);
+	ct.fill();
+	var c = document.getElementById("myCanvasSquare");
+	var ctx = c.getContext("2d");
+	ctx.fillRect(20, 20, 100, 100);
+	var c = document.getElementById("myCanvasTriangle").getContext("2d");
+	c.beginPath();
+	c.fillStyle = 'black';
+	c.moveTo(0,0);
+	c.lineTo(0,300);
+	c.lineTo(300,300);
+	c.closePath();
+	c.fill();
+	var poly = [50,10 , 90,10, 120,60, 90,110 , 40,110, 10,60];
+	var c = document.getElementById("myCanvasHexagon").getContext("2d");
+	c.fillStyle = 'black';
+	c.beginPath();
+	c.moveTo(poly[0],poly[1]);
+	for (i=2; i<poly.length-1; i+=2){
+		c.lineTo(poly[i],poly[i+1]);
+	}
+	c.closePath();
+	c.fill();
+	}
+	function displaytriangle(){
+		document.getElementById("triangle").style.display = "block";
+		document.getElementById("square").style.display = "none";
+		document.getElementById("circle").style.display = "none";
+		document.getElementById("rectangle").style.display = "none";
+		document.getElementById("hexagon").style.display = "none";
+		document.getElementById("guidelines").style.display = "none";
+	}
+	function displaysquare(){
+		document.getElementById("square").style.display = "block";
+		document.getElementById("triangle").style.display = "none";
+		document.getElementById("circle").style.display = "none";
+		document.getElementById("rectangle").style.display = "none";
+		document.getElementById("hexagon").style.display = "none";
+		document.getElementById("guidelines").style.display = "none";
+	}
+	function displaycircle(){
+		document.getElementById("circle").style.display = "block";
+		document.getElementById("square").style.display = "none";
+		document.getElementById("triangle").style.display = "none";
+		document.getElementById("rectangle").style.display = "none";
+		document.getElementById("hexagon").style.display = "none";
+		document.getElementById("guidelines").style.display = "none";
+	}
+	function displayrectangle(){
+		document.getElementById("rectangle").style.display = "block";
+		document.getElementById("square").style.display = "none";
+		document.getElementById("circle").style.display = "none";
+		document.getElementById("triangle").style.display = "none";
+		document.getElementById("hexagon").style.display = "none";
+		document.getElementById("guidelines").style.display = "none";
+	}
+	function displayhexagon(){
+		document.getElementById("hexagon").style.display = "block";
+		document.getElementById("square").style.display = "none";
+		document.getElementById("circle").style.display = "none";
+		document.getElementById("rectangle").style.display = "none";
+		document.getElementById("triangle").style.display = "none";
+		document.getElementById("guidelines").style.display = "none";
+	}			
+	function areaOfTriangle(){
+		var side1 = document.getElementById("side1").value;
+		var side2 = document.getElementById("side2").value;
+		var side3 = document.getElementById("side3").value;
+		var p = (side3 + side2 + side1)/2;
+		var area = Math.sqrt((p*(p-side1)*(p-side2)*(p-side3)));
+		area = Math.round(area * 100) / 100;	
+		document.getElementById('printHere').innerHTML = area + " sq. unit";
+	}
+	function areaOfSquare(){
+		var side = document.getElementById("sqSide").value;
+		var area = side*side;
+		area = Math.round(area * 100) / 100;
+		document.getElementById('printHere').innerHTML = area + " sq. unit";
+	}
+		function areaOfCircle(){
+		var radius = document.getElementById("cirRadius").value;
+		var area = 2*(Math.PI)*radius;
+		area = Math.round(area * 100) / 100;
+		document.getElementById('printHere').innerHTML = area + " sq. unit";
+	}
+		function areaOfRectangle(){
+		var length = document.getElementById("length").value;
+		var breadth = document.getElementById("breadth").value;
+		var area = length*breadth;
+		area = Math.round(area * 100) / 100;
+		document.getElementById('printHere').innerHTML = area + " sq. unit";
+	}
+		function areaOfHexagon(){
+		var side = document.getElementById("hexSide").value;
+		var area = ((3*(Math.sqrt(3)))/2)*side;
+		area = Math.round(area * 100) / 100;
+		document.getElementById('printHere').innerHTML = area + " sq. unit";
+	}
+</script>
+
+
+</head>
+
+
+<body onload="renderShapes()">
+
+<section id="topBar"> 
+    <canvas class="myShapes" id="myCanvasRect" onclick="displayrectangle()" > </canvas>
+    <canvas class="myShapes" id="myCanvasCircle" width=200px; onclick="displaycircle()"></canvas>
+    <canvas class="myShapes" id="myCanvasSquare" onclick="displaysquare()"></canvas>
+    <canvas class="myShapes" id="myCanvasTriangle" onclick="displaytriangle()"></canvas>
+    <canvas class="myShapes" id="myCanvasHexagon" onclick="displayhexagon()"></canvas>
+</section>
+<section id = "inputArea">
+	<div id="guidelines">
+		<h1 style="text-align: centr; padding-top: 80px; font-family: serif; font-size: 30px">Click on the shapes to calculate</h1>
+	</div>
+	<div id="triangle" class = "centeredInput" style="display: none">
+		<form class="my_form" onsubmit="javascript:return false;">
+			Side 1:<br>
+			<input type="number" id="side1" value="">
+			<br>
+			Side 2:<br>
+			<input type="number" id="side2" value="">
+			<br>
+			Side 3:<br>
+			<input type="number" id="side3" value="">
+			<br>
+			<br>
+			<button onclick="areaOfTriangle()">Calculate</button>
+		</form>
+	</div> 
+	<div id="square" class = "centeredInput" style="display: none">
+		<form class="my_form" onsubmit="javascript:return false;">
+			Side :<br>
+			<input type="number" id="sqSide"name="" value="">
+			<br>
+			<br>
+			<button onclick="areaOfSquare()">Calculate</button>
+		</form>
+	</div> 
+	<div id="circle" class = "centeredInput" style="display: none">
+		<form class="my_form" onsubmit="javascript:return false;">
+			Radius :<br>
+			<input type="number" id="cirRadius" name="" value="">
+			<br>
+			<br>
+			<button onclick="areaOfCircle()">Calculate</button>
+		</form>
+	</div> 
+	<div id="rectangle" class = "centeredInput" style="display: none">
+		<form class="my_form" onsubmit="javascript:return false;">
+			Length :<br>
+			<input type="number" id="length" name="" value="">
+			<br>
+			Breadth :<br>
+			<input type="number" id="breadth" name="" value="">
+			<br>
+			<br>
+			<button onclick="areaOfRectangle()">Calculate</button>
+		</form>
+	</div> 
+	<div id="hexagon" class = "centeredInput" style="display: none">
+		<form class="my_form" onsubmit="javascript:return false;">
+			Side :<br>
+			<input type="number" id="hexSide" name="" value="">
+			<br>
+			<br>
+			<button onclick="areaOfHexagon()">Calculate</button>
+		</form>
+	</div> 
+</section>	
+<div id = "renderingArea">
+	<div id = "renderingArea1">
+		<p id= "printHere">
+		</p>
+	</div>
+</div>
+</body>
+</html>
