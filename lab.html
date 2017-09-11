@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="mystyle.css">
+    <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+});
+    </script>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="page-header well">
+    <h1>CHECKLIST</h1>   
+    <p><h2>The following topics have been covered till now : </h2></p>  
+  </div>           
+  <table class="table table-hover table table-bordered ">
+    <thead>
+      <tr class = "success">
+        <th><h3>Property</h3></th>
+          <th><h3>Description</h3></th>
+        <th><h3>Progress</h3></th>  
+      </tr>
+    </thead>
+    <tbody>
+      
+          <tr class='clickable-row info' data-href='https://www.w3schools.com/html/default.asp'>
+        <td><h3>HTML</h3></td>
+        <td>
+            
+            <ol><h4>HTML basically gives a basic structure to the webpage, with basic styling.</h4></ol>
+            <ol> </ol>    
+            
+          <td>
+              <div class="progress">
+				<div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+				    <span>90%</span>
+				</div>
+              </div>
+          </td>      
+          </tr>
+      
+      <tr class='clickable-row warning' data-href='https://www.w3schools.com/css/default.asp'>
+        <td><h3>CSS</h3></td>
+        <td><h4>CSS describes how HTML elements are to be displayed on screen, paper, or in other media. Some of the main properties are : </h4>
+        
+            <ol><h3>Borders</h3>
+            <p> <h4>This property allows us to set borders of different style to any component of the webpae, be it a division, section, table, or anything else.</h4><p></ol>
+
+            <ol><h3>Margins</h3>
+                <p><h4>This property allows us to set size of the space around the elements as per our wish. It has 4 options : margin - top, margin - bottom, margin - left, margin-right.</h4></p>
+            </ol>
+              <ol><h3>Paddings</h3>
+                  <P><h4>This property allows us to generate space round content. It is somewhat similar to margin, and also has 4 options : padding - top, padding - bottom, padding - right, padding - left.</h4></P>
+                </ol>
+              <ol><h3>Fonts</h3>
+                <p><h4>This property allows us to set the font sie, color, style and font variant.</h4></p>
+             </ol>
+              <ol><h3>Links</h3>
+                    <p><h4>There are 4 types of links in HTML. First is the normal, unvisited link. Second is, the visited link. Third is called hover link, and the last one is active link. We can set different styles for all four, including different color, size etc so that its easy for a person to make out which link belongs to which category.</h4></p>
+                </ol>
+              <ol><h3>Align</h3>
+                <p><h4>This property lets us align text, images, sections etc both relative to other content or otherwise. </h4></p>
+                </ol>
+              <ol><h3>Dropdowns</h3>
+                    <p><h4>CSS dropdowns allow the user to write text such that when hovered over, it shows some description of the text.</h4></p>
+                </ol>
+         
+          
+          
+          
+          
+          </td>
+        <td>
+              <div class="progress">
+				<div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+				    <span>85%</span>
+				</div>
+              </div>
+          </td>    
+      </tr>
+      <tr class='clickable-row info' data-href='https://www.w3schools.com/js/default.asp'>
+        <td><h4>Javascript</h4></td>
+          <td><h4>JavaScript Can Change HTML Content</h4></td>
+          <td>
+              <div class="progress">
+				<div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+				    <span>70%</span>
+				</div>
+              </div>
+          </td>  
+      </tr>
+        
+        <tr class='clickable-row warning' data-href='https://www.w3schools.com/bootstrap/default.asp'>
+        <td><h4>Bootstrap</h4></td>
+          <td><h4>Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins</h4></td>
+          <td>
+              <div class="progress">
+				<div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+				    <span>60%</span>
+				</div>
+              </div>
+          </td> 
+        
+        </tr>
+    </tbody>
+  </table>
+    
+    
+    <img src="p.jpg" class="img-rounded" alt="Cinque Terre" width="1000" height="400"> 
+</div>
+        
+
+</body>
+</html>
+    
