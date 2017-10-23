@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>  
+    <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+    <title> QUORA </title>
+    
+    
+    
+    <style> 
+    input[type=text] {
+    width: 530px;
+    height : 50px;
+    box-sizing: border-box;
+    border: 5px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('search.png');
+    background-position: 5px 5px; 
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    margin-top : 5px;
+    margin-bottom: 5px;    
+    padding: 15px 20px 12px 40px;
+   
+}
+        
+        #QUORA{
+            color : maroon;
+            font-family: serif;
+            font-size : 60px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left : 80px;
+            
+        }
+        #answer{
+             font-family: sans-serif;
+            font-size : 20px; 
+             margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        #noti{
+             font-family: sans-serif;
+            font-size : 20px; 
+             margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        #home{
+          
+            font-family: sans-serif;
+            font-size : 20px; 
+             margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        #login{
+            font-family: sans-serif;
+            font-size : 20px; 
+             margin-top: 5px;
+            
+            margin-bottom: 5px;
+        }
+        #ask{
+            font-family: sans-serif;
+            font-size : 20px; 
+             margin-top: 10px;
+            height : 40px;
+            width : 300px;
+            margin-bottom: 5px; 
+            background-color: maroon; 
+            border : none;
+        }
+        #edit{
+            color : darkgrey;
+            
+        }
+        #feed{
+            height : 1700px;
+            
+        }
+        
+        #ques:hover{
+            color : dodgerblue;
+        }
+       
+    #home:hover, #noti:hover, #answer:hover {
+    color: maroon;
+}
+        
+        
+    </style>   
+    
+    
+    
+    
+    
+    
+    </head>
+<body>
+   
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" id = "QUORA">Quora</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#" id = "home">Home</a></li>
+          <li><a href="#" id = "answer">Answer</a></li>
+          <li><a href="#" id = "noti">Notifications</a></li>
+          <li><form id = "bar">
+              <input type="text" name="search" placeholder="Search Quora">
+              </form>
+          </li>
+            <li><a href ="#" id = "login">Login</a></li>
+            
+            <li><button href="#" id = "ask">Ask Question</button></li>
+        </ul>
+        </div>
+</nav>
+<div class="container" style="margin-top:100px">
+  
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lightgray;" id = "feed">
+      
+        <h3><b>Feeds</b> <a href = "#" class="inactive" id ="edit" style = "margin-left : 300px">Edit</a> </h3>
+        <hr>
+        <ul>
+        <ul><a href = "#" style= "color : dimgrey; font-size : 20px;">Top Stories</a></ul>
+        <ul><a href = "#" style= "color : dimgrey; font-size : 20px;">New Questions</a></ul>
+        <ul><a href = "#" style= "color : dimgrey; font-size : 20px;">Bookmarked Answers</a></ul>
+        <ul><a href = "#" style= "color : dimgrey; font-size : 20px;">Around the World</a></ul>
+        <ul><a href = "#" style= "color : dimgrey; font-size : 20px;">US</a></ul>
+        <ul><a href = "#" style= "color : dimgrey; font-size : 20px;">India</a></ul>     
+        </ul>
+       <div id="googleMap" style="width:100%;height:400px; margin-top:500px;"></div>
+
+            <script>
+            function myMap() {
+            var mapProp= {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:5,
+            };
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            }
+            </script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKW7_XDW79QPmSDLhPwMvuUWyYs_OUcLM&callback=myMap"></script>
+        
+        
+      </div>
+    
+      
+      <div class="row">
+        <div class="col-sm-5" style="background-color:white;" >
+            
+            <div id = "ques" class = "row">
+                <a  href = "#" style="color:grey;" ><b><h1>What is your question?</h1></b></a>
+                
+            </div>
+            
+            
+            <hr>
+            
+          <div class="row">
+                <div class="col-sm-3" style="background-color:white;" >
+                    <img src = "user.png" style = "height : 100px; width : 100px;"></div> 
+            <div class="col-sm-9" > 
+            <article class="question">
+                <br><b><u>Aakash Srivastav </u></b><br><br>
+                <b>What is Lorem Ipsum?</b>
+							</article>
+							<article class="answer">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+								<a class="more">See more..</a>
+							</article>
+                <button class = "btn btn-info">Upvote</button>
+                <a href = "#" style="color : grey">Downvote</a>
+              </div>
+            
+            </div>
+            
+            <hr>
+            
+              <div class="row">
+                <div class="col-sm-3" style="background-color:white;" >
+                    <img src = "user.png" style = "height : 100px; width : 100px;"></div> 
+            <div class="col-sm-9" > 
+            <article class="question">
+                <br><b><u>Shubham Pandey </u></b><br><br>
+                <b>What is Lorem Ipsum?</b>
+							</article>
+							<article class="answer">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+								<a class="more">See more..</a>
+							</article>
+                 <button class = "btn btn-info">Upvote</button>
+                <a href = "#" style="color : grey">Downvote</a>
+              </div>
+            
+            </div>
+            
+            
+            <hr>
+              <div class="row">
+                <div class="col-sm-3" style="background-color:white;" >
+                    <img src = "user.png" style = "height : 100px; width : 100px;"></div> 
+            <div class="col-sm-9" > 
+            <article class="question">
+                <br><b><u>Kavya Sharma </u></b><br><br>
+                <b>What is Lorem Ipsum?</b>
+							</article>
+							<article class="answer">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+								<a class="more">See more..</a>
+							</article>
+                 <button class = "btn btn-info">Upvote</button>
+                <a href = "#" style="color : grey">Downvote</a>
+              </div>
+            
+            </div>
+            <hr>
+              <div class="row">
+                <div class="col-sm-3" style="background-color:white;" >
+                    <img src = "user.png" style = "height : 100px; width : 100px;"></div> 
+            <div class="col-sm-9" > 
+            <article class="question">
+                <br><b><u>Riya Mallik </u></b><br><br>
+                <b>What is Lorem Ipsum?</b>
+							</article>
+							<article class="answer">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+								<a class="more">See more..</a>
+							</article>
+                 <button class = "btn btn-info">Upvote</button>
+                <a href = "#" style="color : grey">Downvote</a>
+              </div>
+            
+            </div>
+            <hr>
+              <div class="row">
+                <div class="col-sm-3" style="background-color:white;" >
+                    <img src = "user.png" style = "height : 100px; width : 100px;"></div> 
+            <div class="col-sm-9" > 
+            <article class="question">
+                <br><b><u>Amit Duwedi </u></b><br><br>
+                <b>What is Lorem Ipsum?</b>
+							</article>
+							<article class="answer">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+								<a class="more">See more..</a>
+							</article>
+                 <button class = "btn btn-info">Upvote</button>
+                <a href = "#" style="color : grey">Downvote</a>
+              </div>
+            
+            </div>
+            
+            <hr>
+            
+      </div>
+          </div>
+        
+        <div class="col-sm-3" style="background-color:grey;"></div>
+  </div>
+</div>
+  
+</body>
+</html>
+    
