@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
+    
+    
+    
 <head>
     <style>
 table, td {
@@ -28,12 +32,7 @@ $(document).ready(function(){
       <script>
           var bill=0;
     </script>
-       
-
-
-
-    
-    <script>
+        <script>
         
     function hellofun() {   
                     
@@ -64,25 +63,31 @@ $(document).ready(function(){
                             }
     </script>
     
-    <script>
+
+
+
     
-        function myfunction()
-        {
-            $('button').click(function(){
-           
-                
-            });
-        }
+   
+
     
+        <script>
+    
+$(document).ready(function(){
+    $("#btn1").click(function(){
+       
+        
+       $("ol").append(" <li><div class = 'well'> <button class = 'btn btn-info'>New Category</button></div></li>");
+    });
+
+ 
+});
     </script>
-    
-    
     
     <head>
     <h1 align = "center"> AmazingStuff.com</h1>
     </head>
     
-    </head>
+    </head> 
     <body>
         
         
@@ -149,8 +154,8 @@ $(document).ready(function(){
         
         
         
-        
-
+      <ol>
+                <li>
                 <div class="well">
                     <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#1">Apparels</button> 
        
@@ -196,8 +201,10 @@ $(document).ready(function(){
                        <br>
                         </div>
                  </div>
+            
         </div>
-
+          </li>
+          <li>
             <div class="well">
 
                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#2">Jewellery</button>
@@ -236,8 +243,8 @@ $(document).ready(function(){
                        <br>
             </div>
                 </div>
-            </div>
-
+            </div></li>
+          <li>
            <div class="well">
                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#3">Sports</button>
             <div id="3" class="collapse">
@@ -276,8 +283,8 @@ $(document).ready(function(){
                       <br>
             </div>
                </div>
-            </div>
-
+            </div></li>
+            <li>
            <div class="well"> 
                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#4">Lifestyle</button>
             <div id="4" class="collapse">
@@ -312,8 +319,9 @@ $(document).ready(function(){
             </div>
                </div>
             </div>
-
-           <div class="well">
+          </li>
+          <li>
+           <div class="well" id = "last_well">
 
                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#6">Groceries</button>
             <div id="6" class="collapse">
@@ -346,6 +354,13 @@ $(document).ready(function(){
             </div>
                </div>
             </div>
+          </li>
+   
+        </ol>
+        <form>
+        Category : <input id = "category" type = "text" required>
+        </form>
+         <input id= "btn1" type="submit" class = "btn btn-primary" value="New Category">
         <div class="well">
         <div class = "container">
          <h3><u>CART</u></h3>
