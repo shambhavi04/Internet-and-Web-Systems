@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+    
+    
+<head>
+    <style>
+table, td {
+    border: 2px solid black;
+}
+</style>
+  <title>Online Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+  
+    <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+   
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+     
+</script>
+
+      <script>
+          var bill=0;
+    </script>
+        <script>
+        
+    function hellofun() {   
+                    
+  
+     
+        $('button').click(function(){
+            
+            
+            
+        var table = document.getElementById("myTable"); 
+                bill += Number($(this).attr('value'));
+        document.getElementById('demo').innerHTML = "Your bill is " + bill;
+            
+            
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+     
+    
+        cell1.innerHTML = $(this).attr('name');
+        cell2.innerHTML = $(this).attr('value');   
+        c++;    // dont know why?
+       
+    
+        });
+        
+                       
+                            }
+    </script>
+    
+
+
+
+    
+   
+
+    
+        <script>
+    
+$(document).ready(function(){
+    $("#btn1").click(function(){
+       
+        
+       $("ol").append(" <li><div class = 'well'> <button class = 'btn btn-info'>New Category</button></div></li>");
+    });
+
+ 
+});
+    </script>
+    
+    <head>
+    <h1 align = "center"> AmazingStuff.com</h1>
+    </head>
+    
+    </head> 
+    <body>
+        
+        
+        
+        
+        
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                 <div class="navbar-header">
+                     <a class="navbar-brand" href="#">AmazingStuff.com</a>
+                     </div>
+                        <ul class="nav navbar-nav">
+                          <li class="active"><a href="file:///Users/shambhavivats/Desktop/BootAss/bootAss.html#">HOME</a></li>
+                          <li><a href="file:///Users/shambhavivats/Desktop/BootAss/cart.html#">CART</a></li>
+                            </ul>
+                          </div>
+                        </nav>
+        
+        
+        
+        
+        
+        
+        <div class="container">
+ 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="https://images-eu.ssl-images-amazon.com/images/G/31/img16/Gateway/600x428_todays_deals._CB527352642_.png" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="http://4.bp.blogspot.com/--0tkMDf3gYM/UmtcITczG9I/AAAAAAAAB7Q/Uam0nh4uvKU/s1600/myntra26.jpg" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/01/omaha/images/merch/2017/Storefront/Rotos/Q4/750x415_Roto_FCS-3172_grapes.jpg" alt="New york" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+        
+        
+        
+        
+      <ol>
+                <li>
+                <div class="well">
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#1">Apparels</button> 
+       
+                    <div id="1" class="collapse">
+
+
+            <div class="row">
+            <div class="col-sm-2">
+           <a href="#" title="Rs.900" data-toggle="popover" data-trigger="hover" data-content=" 800 + 100(GST)">Jeans</a>
+                 <img src="jeans.jpg" class="img-circle"  width="200" height="200">
+
+
+                <button name = "Jeans" class = " btn btn-info" value = "900"  onclick = hellofun() > Add To Cart </button>
+
+
+
+                </div>
+                <br>
+
+                <div class="col-sm-2">
+                    <a href="#" title="Rs.750" data-toggle="popover" data-trigger="hover" data-content=" 600 + 150(GST)">Shirt</a>
+                      <img src="shirt.jpg" class="img-circle"  width="200" height="200">
+                     <button class = " btn btn-info" name = "Shirt" value="750" onclick = hellofun()> Add To Cart </button>
+                </div>
+                <br>
+                <div class="col-sm-2">
+                    <a href="#" title="Rs. 800" data-toggle="popover" data-trigger="hover" data-content=" 600 + 200(GST)">Sweater</a>
+                      <img src="sweater.jpg" class="img-circle"  width="200" height="200">
+                     <button class = " btn btn-info" name = "Sweater" value = "800" onclick = hellofun() > Add To Cart </button>
+                </div>
+                       <br>
+               <div class="col-sm-3">
+                    <a href="#" title="Rs. 900 " data-toggle="popover" data-trigger="hover" data-content=" 800 + 100(GST)">Dress</a>
+                     <img src="dress.jpg" class="img-circle"  width="200" height="200">
+                    <button class = " btn btn-info" value = "900" onclick = hellofun() > Add To Cart </button>
+                </div>
+                       <br>
+                <div class="col-sm-3">
+                    <a href="#" title="Rs. 1500" data-toggle="popover" data-trigger="hover" data-content="1400 + 100(GST)">Jump Suit</a>
+                      <img src="jumpsuit.jpg" class="img-circle"  width="200" height="200">
+                     <button class = " btn btn-info" name = "Jumpsuit" value = "1500" onclick = hellofun() > Add To Cart </button>
+                </div>
+                       <br>
+                        </div>
+                 </div>
+            
+        </div>
+          </li>
+          <li>
+            <div class="well">
+
+                 <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#2">Jewellery</button>
+            <div id="2" class="collapse">
+
+            <div class="row">
+                    <div class="col-sm-3">
+            <a href="#" title="Rs. 5000" data-toggle="popover" data-trigger="hover" data-content="3500 + 1500(GST)">Necklace</a>
+                        <img src="necklace.jpg" class="img-circle"  width="200" height="200">
+                         <button class = " btn btn-info" value = "5000" name = "Necklace" onclick = hellofun() > Add To Cart </button>
+                </div>
+                       <br>
+                     <div class="col-sm-2">
+            <a href="#" title="Rs. 2000" data-toggle="popover" data-trigger="hover" data-content="1500 + 500(GST)">Earrings</a>
+                         <img src="earrings.jpg" class="img-circle"  width="200" height="200">
+                          <button class = " btn btn-info" value = "2000" name = "Earrings" onclick = hellofun() > Add To Cart </button>
+                </div>
+                       <br>
+                    <div class="col-sm-2">
+            <a href="#" title="Rs. 3400" data-toggle="popover" data-trigger="hover" data-content="3000 + 400(GST)">Bracelet</a>
+                        <img src="bracelet.jpg" class="img-circle"  width="200" height="200">
+                         <button class = " btn btn-info" value = "3400" name="Bracelet" onclick = hellofun() > Add To Cart </button>
+                </div>
+                     <br>
+                      <div class="col-sm-2">
+            <a href="#" title="Rs. 2000" data-toggle="popover" data-trigger="hover" data-content="1500+ 500(GST)">Anklet</a>
+                          <img src="anklet.jpg" class="img-circle"  width="200" height="200">
+                           <button class = " btn btn-info" value = "2000" name = "Anklet" onclick = hellofun() > Add To Cart </button>
+                </div>
+                    <br>
+                      <div class="col-sm-3">
+            <a href="#" title="Prics" data-toggle="popover" data-trigger="hover" data-content="Rs. 900 : 800 + 100(GST)">Ring</a>
+                          <img src="ring.jpg" class="img-circle"  width="200" height="200">
+                           <button class = " btn btn-info" value = "900" name = "Ring" onclick = hellofun() > Add To Cart </button>
+                </div>
+                       <br>
+            </div>
+                </div>
+            </div></li>
+          <li>
+           <div class="well">
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#3">Sports</button>
+            <div id="3" class="collapse">
+
+            <div class="row">
+                  <div class="col-sm-3">
+
+            <a href="#" title="Rs. 950 " data-toggle="popover" data-trigger="hover" data-content=" 850 + 100(GST)">Cricket Bat</a>
+                      <img src="cbat.jpg" class="img-circle"  width="200" height="200" name = "Cricket Bat">
+                       <button class = " btn btn-info" value="950" onclick = hellofun() > Add To Cart </button>
+                </div> 
+                      <br>
+                <div class="col-sm-3">
+            <a href="#" title="Rs. 700 " data-toggle="popover" data-trigger="hover" data-content=" 600 + 100(GST)">Volley Ball</a>
+                    <img src="vbat.jpg" class="img-circle"  width="200" height="200">
+                     <button class = " btn btn-info" value = "700" name = "Volley Ball" onclick = hellofun() > Add To Cart </button>
+                </div> 
+                    <br>
+                  <div class="col-sm-2">
+            <a href="#" title="Rs. 900 " data-toggle="popover" data-trigger="hover" data-content=" 800 + 100(GST)">Football</a>
+                      <img src="ball.jpg" class="img-circle"  width="200" height="200">
+                       <button class = " btn btn-info" value = "900" name = "Football" onclick = hellofun() > Add To Cart </button>
+                </div>
+                      <br>
+              <div class="col-sm-2">
+            <a href="#" title="Rs. 1000 " data-toggle="popover" data-trigger="hover" data-content="900 + 100(GST)">Swimwear</a>
+                  <img src="swim.jpg" class="img-circle"  width="200" height="200">
+                   <button class = " btn btn-info" value = "1000" name = "Swimwear" onclick = hellofun() > Add To Cart </button>
+                </div>    
+                  <br>
+                  <div class="col-sm-2">
+            <a href="#" title="Rs. 900 " data-toggle="popover" data-trigger="hover" data-content=" 800 + 100(GST)">Sports shoes</a>
+            <img src="shoes.jpg" class="img-circle"  width="200" height="200">
+                       <button class = " btn btn-info" value = "900" name= "Sports shoes" onclick = hellofun() > Add To Cart </button>
+                </div> 
+                      <br>
+            </div>
+               </div>
+            </div></li>
+            <li>
+           <div class="well"> 
+               <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#4">Lifestyle</button>
+            <div id="4" class="collapse">
+            <div class="row">
+                <div class="col-sm-3">
+            <a href="#" title="Rs. 500 " data-toggle="popover" data-trigger="hover" data-content=" 400 + 100(GST)">Flower Vase</a>
+                    <img src="vase.jpg" class="img-circle"  width="200" height="200">
+                     <button class = " btn btn-info" value = "500" name = "Flower Vase" onclick = hellofun() > Add To Cart </button>
+                </div>  
+                    <br>
+                 <div class="col-sm-3">
+            <a href="#" title="Rs. 400 " data-toggle="popover" data-trigger="hover" data-content=" 300 + 100(GST)">Paintings</a>
+                     <img src="paint.jpg" class="img-circle"  width="200" height="200">
+                      <button class = " btn btn-info" value = "400" name = "Painting" onclick = hellofun() > Add To Cart </button>
+                </div>
+                     <br>
+                <div class="col-sm-2">
+            <a href="#" title="Rs. 600 " data-toggle="popover" data-trigger="hover" data-content="500 + 100(GST)">Table</a>
+                    <img src="table.jpg" class="img-circle"  width="200" height="200">
+                     <button class = " btn btn-info" value = "600" name = "Table" onclick = hellofun() > Add To Cart </button>
+                </div>   <br>
+                 <div class="col-sm-2">
+            <a href="#" title="Rs. 900 " data-toggle="popover" data-trigger="hover" data-content=" 800 + 100(GST)">Bed Linen</a>
+                     <img src="linen.jpg" class="img-circle"  width="200" height="200">
+                      <button class = " btn btn-info" value= "900" name = "Bed linen" onclick = hellofun() > Add To Cart </button>
+                </div>  <br>
+                <div class="col-sm-2">
+            <a href="#" title="Rs. 500" data-toggle="popover" data-trigger="hover" data-content=" 400 + 100(GST)">Tea Cups</a>
+                    <img src="cups.jpg" class="img-circle"  width="200" height="200">
+                     <button class = " btn btn-info" value = "500" name = "Tea cup" onclick = hellofun() > Add To Cart </button>
+                </div>  <br>
+            </div>
+               </div>
+            </div>
+          </li>
+          <li>
+           <div class="well" id = "last_well">
+
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#6">Groceries</button>
+            <div id="6" class="collapse">
+            <div class="row">
+               <div class="col-sm-3">
+            <a href="#" title="Rs. 40" data-toggle="popover" data-trigger="hover" data-content=" 20 + 20(GST)">Bread</a>
+                   <img src="bread.jpg" class="img-circle"  width="200" height="200">
+                    <button class = " btn btn-info" value = "40" name= "Bread" onclick = hellofun() > Add To Cart </button>
+                </div> <br>
+                <div class="col-sm-2">
+            <a href="#" title="Rs. 50 " data-toggle="popover" data-trigger="hover" data-content=" 30 + 20(GST)">Butter</a>
+                    <img src="butter.jpg" class="img-circle"  width="200" height="200">
+                     <button class = " btn btn-info" value = "50" name= "Butter" onclick = hellofun() > Add To Cart </button>
+                </div><br>
+                 <div class="col-sm-2">
+            <a href="#" title="Rs. 250 " data-toggle="popover" data-trigger="hover" data-content=" 150 + 50(GST)">Cereal</a>
+                     <img src="cereal.jpg" class="img-circle"  width="200" height="200">
+                      <button class = " btn btn-info" value="250" name = "Cereal" onclick = hellofun() > Add To Cart </button>
+                </div><br>
+                 <div class="col-sm-2">
+            <a href="#" title="Rs. 400" data-toggle="popover" data-trigger="hover" data-content=" 300 + 100(GST)">Vegetables</a>
+                     <img src="vege.jpg" class="img-circle"  width="200" height="200">
+                      <button class = " btn btn-info" value = "400" name = "Vegetables" onclick = hellofun() > Add To Cart </button>
+                </div>   <br>
+                 <div class="col-sm-3">
+            <a href="#" title="Rs. 200 " data-toggle="popover" data-trigger="hover" data-content=" 100 + 100(GST)">Juices</a>
+                     <img src="juice.jpg" class="img-circle"  width="200" height="200">
+                       <button class = " btn btn-info" value = "200" name="Juice" onclick=myFunction1() onclick = hellofun() > Add To Cart </button>  
+                </div>  <br>
+            </div>
+               </div>
+            </div>
+          </li>
+   
+        </ol>
+        <form>
+        Category : <input id = "category" type = "text" required>
+        </form>
+         <input id= "btn1" type="submit" class = "btn btn-primary" value="New Category">
+        <div class="well">
+        <div class = "container">
+         <h3><u>CART</u></h3>
+            <br>
+        <table id="myTable" class = "table table-hover" >
+                       
+                          <thead>
+                                  <tr>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                   
+                                  </tr>
+                        </thead>
+                        <tbody>
+                                      
+                        </tbody>    
+                   
+                </table>
+            
+        
+        </div>
+            
+            <div>
+                
+                <output id="total"></output>
+            
+            </div>
+                        
+        </div>
+        
+        
+            <div class="well">
+            <div class = "container">
+                
+                <h3><u>BILL</u></h3>
+               <p class = "demo" id ="demo"></p>
+               
+            </div>
+            </div>
+
+            <div class = "container">
+                <img src="bgimage.jpg" class="img-circle"  width="980 height="470>
+
+            </div>
+            <div class = "well">
+                <p><b><h4> For any queries, contact us at  :</h4> </b></p>
+                <p>amazingstuff@abc.com</p>
+                <p>011-23232334</p>
+            </div>
+               
+                
+        
+       
+
+
+        </body>

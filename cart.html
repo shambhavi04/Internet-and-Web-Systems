@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Online Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+  
+    <script src="jquery-3.2.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+    
+    <script type="text/javascript">       
+   
+    function myFunction1()
+    {
+    
+        
+   $('button').click(function(){
+        $(".btn btn-success").click(function(){
+            var ITEM = $(this).attr('name');
+            var PRICE = $(this).val();
+            var markup = "<tr><td>" + ITEM + "</td><td>" + PRICE + "</td></tr>";
+            $("table tbody").append(markup);
+        });
+    }); 
+        
+}
+</script>
+        
+        
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+});
+</script>
+
+       
+       
+
+<script>
+function myFunction()
+    {
+         var theTotal = 0;
+        var items_tot = " ";
+$('button').click(function(){
+   theTotal = Number(theTotal) + Number($(this).val());
+    
+    
+    items_tot = items_tot + $(this).attr('name') + " , ";
+    
+    
+    
+    $('#tussenstand').val("Total: "+theTotal);  
+      
+    $('#items').val("Total items are : " +items_tot );  
+    
+});
+    
+$('#tussenstand').val("Your total bill is: "+theTotal);
+$('#items').val("Your Items are: "+items_tot);        
+        
+    }
+    
+</script>    
+    
+    <head>
+    <h1 align = "center"> AmazingStuff.com</h1>
+    </head>
+    
+    
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                 <div class="navbar-header">
+                     <a class="navbar-brand" href="file:///Users/shambhavivats/Desktop/BootAss/bootAss.html#">AmazingStuff.com</a>
+                     </div>
+                        <ul class="nav navbar-nav">
+                          <li class="active"><a href="file:///Users/shambhavivats/Desktop/BootAss/bootAss.html#">HOME</a></li>
+                          <li><a href="file:///Users/shambhavivats/Desktop/BootAss/cart.html##">CART</a></li>
+                            </ul>
+                          </div>
+                        </nav>
+        
+        <div class="container">
+
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>ITEMS</th>
+            
+                        <th>PRICE</th>
+                      </tr>
+                    </thead>
+                      <tbody>
+                      
+                      </tbody>
+                    
+                  </table>
+                </div>
+        
+        
+        
+    </body>
